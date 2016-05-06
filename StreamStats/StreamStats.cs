@@ -1,7 +1,9 @@
 ﻿using System;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace StreamStats
 {
 	public class App : Application
@@ -9,21 +11,7 @@ namespace StreamStats
 		public App()
 		{
 			// The root page of your application
-			var content = new ContentPage
-			{
-				Title = "StreamStats",
-				Content = new StackLayout
-				{
-					VerticalOptions = LayoutOptions.Center,
-					Children = {
-						new Label {
-							HorizontalTextAlignment = TextAlignment.Center,
-							Text = "Welcome to Xamarin Forms!"
-						}
-					}
-				}
-			};
-
+			var content = new DashboardPage();
 			MainPage = new NavigationPage(content);
 		}
 
