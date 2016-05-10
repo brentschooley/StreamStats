@@ -6,10 +6,12 @@
 		Title="StreamStats">
 	<ContentPage.Content>
 		<StackLayout VerticalOptions="Center" 
-				     HorizontalOptions="Center"
-					 BindingContext="{local:DashboardViewModel}">
+				     HorizontalOptions="Center">
 			<Label Text="CURRENT VIEWERS" TextColor="#4F037F"/>
-			<Label Text="{Binding ViewerCount}" HorizontalOptions="Center" FontSize="72" TextColor="#4F037F"/>
+			<Label Text="{Binding ViewerCount}" 
+				HorizontalOptions="Center" 
+				FontSize="72" 
+				TextColor="#4F037F"/>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
