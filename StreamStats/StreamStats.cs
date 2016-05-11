@@ -12,7 +12,7 @@ namespace StreamStats
 		{
 			// The root page of your application
 			var content = new DashboardPage();
-			MainPage = new NavigationPage(content);
+			MainPage = new NavigationPage(content) { BarBackgroundColor = Color.FromHex("#4F037F"), BarTextColor = Color.White };
 		}
 
 		protected override void OnStart()

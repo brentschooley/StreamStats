@@ -2,16 +2,59 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 		xmlns:local="clr-namespace:StreamStats;assembly=StreamStats"
-		x:Class="StreamStats.DashboardPage" 
-		Title="StreamStats">
+		x:Class="StreamStats.DashboardPage"
+		Title="StreamStats"
+		BackgroundColor="#FDFAFF">
 	<ContentPage.Content>
-		<StackLayout VerticalOptions="Center" 
-				     HorizontalOptions="Center">
-			<Label Text="CURRENT VIEWERS" TextColor="#4F037F"/>
-			<Label Text="{Binding ViewerCount}" 
-				HorizontalOptions="Center" 
-				FontSize="72" 
-				TextColor="#4F037F"/>
+		<StackLayout HorizontalOptions="Center" Margin="0,20,0,0">
+			<StackLayout>
+				<Label Text="STREAM DURATION" TextColor="#4F037F" FontSize="14" HorizontalOptions="Center"/>
+				<Label Text="{Binding Duration}" 
+					HorizontalOptions="Center" 
+					FontSize="36" 
+					TextColor="#4F037F"/>
+			</StackLayout>
+
+			<StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+				<!-- Viewers Control -->
+				<StackLayout>
+					<Label Text="CURRENT VIEWERS" TextColor="#4F037F" FontSize="14" HorizontalOptions="Center"/>
+					<Label Text="{Binding ViewerCount}" 
+						HorizontalOptions="Center" 
+						FontSize="36" 
+						TextColor="#4F037F"/>
+				</StackLayout>
+					
+				<!-- Followers Control -->
+				<StackLayout Margin="40,0,0,0">
+					<Label Text="FOLLOWERS" TextColor="#4F037F" FontSize="14" HorizontalOptions="Center"/>
+					<Label Text="{Binding Followers}" 
+						HorizontalOptions="Center" 
+						FontSize="36" 
+						TextColor="#4F037F"/>
+				</StackLayout>
+			</StackLayout>
+
+			<StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+				<!-- Viewers Control -->
+				<StackLayout>
+					<Label Text="NEW FOLLOWERS" TextColor="#4F037F" FontSize="14" HorizontalOptions="Center"/>
+					<Label Text="{Binding NewFollowers}" 
+						HorizontalOptions="Center" 
+						FontSize="36" 
+						TextColor="#4F037F"/>
+				</StackLayout>
+					
+				<!-- Followers Control -->
+				<StackLayout Margin="40,0,0,0">
+					<Label Text="TOTAL DONATIONS" TextColor="#4F037F" FontSize="14" HorizontalOptions="Center"/>
+					<Label Text="{Binding TotalDonations}" 
+						HorizontalOptions="Center" 
+						FontSize="36" 
+						TextColor="#4F037F"/>
+				</StackLayout>
+			</StackLayout>
+
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
